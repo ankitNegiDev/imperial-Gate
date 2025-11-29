@@ -90,7 +90,7 @@ export default function VideoSection() {
             <div className="absolute inset-0 bg-black/20"></div>
 
             {/* Controls */}
-            <div className="absolute bottom-5 right-5 flex items-center gap-3 ">
+            <div className="absolute bottom-2 right-5 flex items-center gap-3 ">
 
                 {/* Play / Pause */}
                 <button
