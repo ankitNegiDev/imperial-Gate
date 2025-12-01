@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 
@@ -27,16 +26,7 @@ function ProductListing() {
                 >
 
                     {/* IMAGE CARD */}
-                    <div className="
-                        w-48 h-48 md:w-56 md:h-56 
-                        rounded-2xl overflow-hidden 
-                        border border-[#8f7c45]/70 
-                        shadow-[0_0_25px_rgba(143,124,69,0.15)]
-                        hover:shadow-[0_0_35px_rgba(143,124,69,0.25)]
-                        hover:scale-105
-                        transition-all duration-300
-                        bg-black
-                        hover:cursor-pointer
+                    <div className="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border border-[#8f7c45]/70 shadow-[0_0_25px_rgba(143,124,69,0.15)] hover:shadow-[0_0_35px_rgba(143,124,69,0.25)] hover:scale-105 transition-all duration-300 bg-black hover:cursor-pointer
                     ">
                         <Image
                             src={item.image}
