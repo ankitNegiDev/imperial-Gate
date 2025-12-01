@@ -8,13 +8,13 @@ export default function MoreDoorIdeas(props) {
     function renderImages() {
         return list.map(function (img, index) {
             return (
-                <div key={index} className="mb-1">
+                <div key={index} className="mb-2">
                     <Image
                         src={img}
                         alt={"idea-" + index}
                         width={150}
                         height={150}
-                        className="rounded shadow"
+                        className="rounded shadow border-3 border-white"
                     />
                 </div>
             );
@@ -22,7 +22,7 @@ export default function MoreDoorIdeas(props) {
     }
 
     return (
-        <div className="w-full mt-20">
+        <div className="w-full mt-18">
             {/* Title Box */}
             <div className="w-38 text-center border-2 border-yellow-500 text-yellow-500 font-semibold p-3 mb-2">
                 SEE MORE <br />
