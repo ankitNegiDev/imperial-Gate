@@ -32,7 +32,7 @@ function BenefitsSection() {
                         </h3>
 
                         <p className="mt-3 text-black/70 text-base max-w-lg">
-                            We’ll measure to your home’s exact specs and help you
+                            We'll measure to your home's exact specs and help you
                             choose a design to fit your style & budget.
                         </p>
                     </div>
