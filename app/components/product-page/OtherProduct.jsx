@@ -22,7 +22,7 @@ function OtherProduct({ image, text }) {
                 flex items-center gap-4 p-4
                 bg-[#0d0d0d] 
                 rounded-2xl 
-                border border-[#8f7c45]/30
+                border border-white
                 shadow-[0_0_15px_rgba(0,0,0,0.4)]
                 hover:shadow-[0_0_25px_rgba(143,124,69,0.6)]
                 hover:-translate-y-1 
