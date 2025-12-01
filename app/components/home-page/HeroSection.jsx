@@ -112,7 +112,7 @@ function HeroSection() {
     }
 
     return (
-        <section className="hero-section-outer">
+        <section className="hero-section-outer border-none">
             <Swiper
                 modules={[Autoplay, Pagination]}
                 loop={true}
