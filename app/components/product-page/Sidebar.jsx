@@ -28,7 +28,7 @@ function Sidebar() {
                 rounded-2xl 
                 shadow-[0_0_25px_rgba(0,0,0,0.5)] 
                 p-4 
-                border border-[#8f7c45]/40
+                border border-white
 
             "
         >
