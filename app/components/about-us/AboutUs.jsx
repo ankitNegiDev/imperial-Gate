@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 function AboutUs() {
 
-    var timelineData = [
+    const timelineData = [
         { year: "2017", text: "Started in a small garage crafting security screen doors." },
         { year: "2019", text: "Expanded into designer wrought-iron gates & railings." },
         { year: "2022", text: "Built full-scale manufacturing unit & skilled artisan team." },
         { year: "2024", text: "Serving architects, luxury homeowners & premium builders PAN-India." }
     ];
 
-    var capabilities = [
+    const capabilities = [
         "Custom Luxury Gates",
         "Designer Wrought-Iron Doors",
         "Balcony & Staircase Railings",
@@ -20,25 +20,34 @@ function AboutUs() {
         "On-site Measurement, Delivery & Installation",
     ];
 
-    var processSteps = [
+    const processSteps = [
         { step: "01", title: "Concept & Consultation" },
         { step: "02", title: "Design & Engineering" },
         { step: "03", title: "Fabrication & Finishing" },
         { step: "04", title: "Delivery & Installation" },
     ];
 
-    var qualityList = [
+    const qualityList = [
         "Premium grade metals & corrosion-resistant coatings",
         "Precision hand welding & advanced finishing standards",
         "Multi-stage inspection & structural safety validation",
         "Warranty coverage & premium installation support"
     ];
-
-    var testimonials = [
-        "Exceptional craftsmanship and premium finishing. The gate completely transformed our home exterior.",
-        "The Dwars team's attention to detail is unmatched. Installation was smooth and professional.",
-        "We recommend them to every architect we work with—true experts in artistic ironwork."
+    const testimonials = [
+        {
+            image: "/testimonial-img-1.png",
+            text: "Exceptional craftsmanship and premium finishing. The gate completely transformed our home exterior."
+        },
+        {
+            image: "/testimonial-img-2.png",
+            text: "The Dwars team's attention to detail is unmatched. Installation was smooth and professional."
+        },
+        {
+            image: "/testimonial-img-3.png",
+            text: "We recommend them to every architect we work with — true experts in artistic ironwork."
+        }
     ];
+
 
     return (
         <div className="bg-[#050505] text-white pt-0 mt-13 pb-28">
@@ -171,7 +180,7 @@ function AboutUs() {
                                 className="bg-[#0c0c0c] border border-[#8f7c45]/30 rounded-2xl p-10 text-center"
                             >
                                 <h3 className="text-4xl font-bold text-[#fac21e] ">{step.step}</h3>
-                                <p className="text-lg mt-3 font-medium">{step.title}</p>
+                                <p className="text-base mt-3 font-medium">{step.title}</p>
                             </motion.div>
                         );
                     })}
@@ -244,32 +253,67 @@ function AboutUs() {
 
             {/* TESTIMONIALS */}
             <motion.section
-                className="max-w-7xl mx-auto px-6 md:px-12 mb-24"
+                className="max-w-7xl mx-auto px-6 md:px-12 mb-28"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-3xl md:text-4xl font-semibold mb-12 text-center text-[#fac21e]">What Our Clients Say</h2>
+                <h2 className="text-4xl md:text-5xl font-semibold mb-16 text-center text-[#fac21e] tracking-wide">
+                    What Our Clients Say
+                </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map(function (text, index) {
+                <motion.div
+                    initial={{ width: 0, opacity: 0 }}
+                    whileInView={{ width: "16rem", opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                    className="mx-auto h-[3px] rounded-full bg-linear-to-r from-transparent via-[#fac21e] to-transparent mb-16"
+                />
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    {testimonials.map(function (testimonial, index) {
                         return (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                transition={{ duration: 0.8, delay: index * 0.12 }}
                                 viewport={{ once: true }}
-                                className="bg-[#0c0c0c] border border-[#8f7c45]/30 p-8 rounded-2xl"
+                                className="
+                        group bg-[#0c0c0c]/70 backdrop-blur-md rounded-2xl p-10 text-center 
+                        hover:-translate-y-2 transition-all duration-500 
+                        border border-[#8f7c45]/30 relative overflow-hidden
+                    "
                             >
-                                <p className="text-gray-300 text-sm leading-relaxed">⭐ ⭐ ⭐ ⭐ ⭐</p>
-                                <p className="mt-3 text-gray-300 text-base leading-relaxed">{text}</p>
+                                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-[3px] border-[#fac21e] 
+                    shadow-[0_0_25px_#fac21e40] group-hover:shadow-[0_0_35px_#fac21e80] transition-all duration-700">
+                                    <Image
+                                        src={testimonial.image}
+                                        width={100}
+                                        height={100}
+                                        className="object-cover"
+                                        alt="client"
+                                    />
+                                </div>
+
+                                <p className="text-gray-300 text-sm mt-6">⭐ ⭐ ⭐ ⭐ ⭐</p>
+
+                                <p className="mt-4 text-gray-300 text-[15px] leading-relaxed italic">
+                                    {testimonial.text}
+                                </p>
+
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: "6rem" }}
+                                    transition={{ duration: 1, delay: 0.6 }}
+                                    className="mx-auto mt-6 h-[2px] bg-gradient-to-r from-transparent via-[#fac21e] to-transparent rounded-full"
+                                />
                             </motion.div>
                         );
                     })}
                 </div>
             </motion.section>
+
 
             {/* CTA */}
             <motion.section
@@ -279,11 +323,11 @@ function AboutUs() {
                 transition={{ duration: 0.9 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-4xl font-semibold mb-6">Let’s Build Something Legendary</h2>
+                <h2 className="text-4xl font-semibold mb-6">Let's Build Something Legendary</h2>
                 <p className="text-gray-300 mb-8 text-base">
                     Ready to begin designing your premium architectural metalwork project?
                 </p>
-                <button className="px-12 py-4 rounded-full bg-linear-to-r from-[#715723] to-[#8f7c45] text-black font-semibold uppercase tracking-wide hover:brightness-110 transition">
+                <button className="px-12 py-4 rounded-full bg-linear-to-r from-[#715723] to-[#8f7c45] text-black font-semibold uppercase tracking-wide hover:brightness-110 transition hover:cursor-pointer">
                     Start Your Project
                 </button>
             </motion.section>
