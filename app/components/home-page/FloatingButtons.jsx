@@ -76,21 +76,13 @@ function FloatingButtons() {
             </div> */}
             
             <div
-                className="
-                    fixed bottom-2 right-2 flex flex-col items-center gap-3 z-50
-                    backdrop-blur-md bg-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.2)]
-                    rounded-full px-2 py-4 border border-white/20
-                "
+                className="fixed bottom-2 right-2 flex flex-col items-center gap-3 z-50 backdrop-blur-md bg-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.2)] rounded-full px-2 py-4 border border-white/20"
             >
 
                 {/* Enquiry Icon */}
                 <button
                     onClick={toggleForm}
-                    className="
-                        text-[#d4af37] p-3 rounded-full transition-all 
-                        hover:bg-[#d4af37] hover:text-black hover:scale-110
-                        flex items-center justify-center cursor-pointer
-                    "
+                    className="text-[#d4af37] p-3 rounded-full transition-all hover:bg-[#d4af37] hover:text-black hover:scale-110 flex items-center justify-center cursor-pointer"
                 >
                     <FaRegEnvelope size={20} />
                 </button>
@@ -102,11 +94,7 @@ function FloatingButtons() {
                 <a
                     href="https://wa.me/91XXXXXXXXXX"
                     target="_blank"
-                    className="
-                        text-green-500 p-3 rounded-full transition-all
-                        hover:bg-green-500 hover:text-white hover:scale-110
-                        flex items-center justify-center hover:cursor-pointer
-                    "
+                    className="text-green-500 p-3 rounded-full transition-all hover:bg-green-500 hover:text-white hover:scale-110 flex items-center justify-center hover:cursor-pointer"
                 >
                     <FaWhatsapp size={22} />
                 </a>
@@ -142,38 +130,29 @@ function FloatingButtons() {
                             <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg 
-                                            placeholder-gray-600 text-gray-900 bg-white
-                                            focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
+                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg placeholder-gray-600 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
                             />
 
                             <input
                                 type="text"
                                 placeholder="Phone Number"
-                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg 
-                                            placeholder-gray-600 text-gray-900 bg-white
-                                            focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
+                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg placeholder-gray-600 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
                             />
 
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg 
-                                            placeholder-gray-600 text-gray-900 bg-white
-                                            focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
+                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg  placeholder-gray-600 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
                             />
 
                             <textarea
                                 placeholder="Your Message"
-                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg h-32
-                                            placeholder-gray-600 text-gray-900 bg-white
-                                            focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
+                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg h-32 placeholder-gray-600 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
                             ></textarea>
 
                             <button
                                 type="submit"
-                                className="w-full bg-black text-white py-3.5 rounded-lg 
-                                            hover:bg-gray-900 transition font-medium tracking-wide shadow-sm hover:cursor-pointer"
+                                className="w-full bg-black text-white py-3.5 rounded-lg hover:bg-gray-900 transition font-medium tracking-wide shadow-sm hover:cursor-pointer"
                             >
                                 Submit Enquiry
                             </button>
