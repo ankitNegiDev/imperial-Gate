@@ -22,13 +22,13 @@ function HeroSection() {
             title: "Experience Modern Luxury",
             description: "Handcrafted designs made with precision and heritage.",
             image: "/royal-entry-doors.jpg",
-            bgImage:"/task-2-bg-2.jpg",
+            bgImage:"/task-2-bg-3.jpg",
         },
         {
             title: "Elegance That Speaks",
             description: "Luxury collections created for your most special moments.",
             image: "/flat-entrance.png",
-            bgImage:"/task-2-bg-4.jpg"
+            bgImage:"/task-2-bg-3.jpg"
         }
     ];
 
