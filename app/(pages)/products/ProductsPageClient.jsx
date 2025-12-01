@@ -15,7 +15,14 @@ import Tab from "../../components/product-page/Tab"
 import YouTubeEmbed from "../../components/product-page/YouTubeEmbed"
 // import Footer from "./components/Footer";
 // import Footer from "../components/product-page/Footer"
-import Footer from "../../components/home-page/Footer"
+// import Footer from "../../components/home-page/Footer"
+
+import FloatingButtons from "../../components/home-page/FloatingButtons";
+import FAQ from "../../components/home-page/Faq";
+
+
+
+
 
 import { useSearchParams } from "next/navigation";
 
@@ -39,9 +46,9 @@ function ProductsPageClient() {
     ];
     return (
         <>
-            <div className="flex pt-34 pb-15 w-8xl bg-black">
+            <div className="flex pt-34 pb-15 w-8xl gap-5 bg-black">
                 {/* left */}
-                <div className="w-[43%] flex flex-col gap-0 mr-0 ml-3 mt-5">
+                <div className="w-[43%] flex flex-col gap-0 mr-0 ml-2 mt-5">
                     <Sidebar />
                     <OtherProduct
                         image={"/product-page/Bamboo.jpg"}
@@ -63,10 +70,10 @@ function ProductsPageClient() {
 
                 <div className="w-full flex flex-col m-0">
                     {/* Horizontal row: Swiper + More Ideas */}
-                    <div className="flex w-full gap-0 mb-6">
+                    <div className="flex w-full gap-0 mb-6 p-0.5">
                         {/* LEFT: Image Swiper */}
                         <div className="w-3/4">
-                            <h1 className="ml-4 text-4xl font-bold text-[#fac21e]  mb-0 mt-1 tracking-wide drop-shadow-[0_0_6px_rgba(143,124,69,0.5)] text-center">
+                            <h1 className="ml-4 text-4xl font-bold text-[#fac21e]  mb-0 mt-2 tracking-wide drop-shadow-[0_0_6px_rgba(143,124,69,0.5)] text-center">
                                 {category}
                             </h1>
 
@@ -75,9 +82,10 @@ function ProductsPageClient() {
                         </div>
 
                         {/* RIGHT: More Door Ideas */}
-                        <div className="w-1/4">
+                        <div className="w-1/4 ml-5 ">
                             <MoreDoorIdeas doorImages={doorImages} />
                         </div>
+
                         {/* right  */}
                         <div>
                             <CallForm />
@@ -93,12 +101,17 @@ function ProductsPageClient() {
                     <div>
                         <YouTubeEmbed />
                     </div>
+
+                    <div>
+                        <FAQ/>
+                    </div>
                 </div>
             </div>
             <div>
                 {/* <Footer /> */}
 
                 {/* <Footer/> */}
+                <FloatingButtons/>
             </div>
         </>
     );
