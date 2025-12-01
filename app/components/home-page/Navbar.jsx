@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { FaArrowRight, FaChevronDown, FaHome } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
+// import { RxCross2 } from "react-icons/rx";
+import { AiOutlineClose } from "react-icons/ai";
 
 
 // playfir font
@@ -367,7 +369,7 @@ export default function Navbar() {
                                 <div className="max-w-6xl mx-auto p-2 relative">
 
                                     {/* Close Button */}
-                                    <button
+                                    {/* <button
                                         onClick={() => setActiveMenu("")}
                                         className="
                                             absolute top-3 right-[-100] 
@@ -385,7 +387,27 @@ export default function Navbar() {
                                         "
                                     >
                                         ✕
+                                    </button> */}
+
+                                    <button
+                                        onClick={() => setActiveMenu("")}
+                                        className="
+                                            absolute top-3 right-[-100]
+                                            text-[#D4AF37]
+                                            font-[900]
+                                            text-2xl
+                                            flex items-center justify-center
+                                            transition-all duration-200
+                                            hover:cursor-pointer
+                                        "
+                                    >
+                                        {/* <RxCross2 size={32} /> */}
+                                        <AiOutlineClose size={32} />
                                     </button>
+
+
+
+
                                     {/* GRID */}
                                     <div className="grid grid-cols-4 gap-x-10 gap-y-10">
 
