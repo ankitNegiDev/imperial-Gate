@@ -11,12 +11,12 @@ function Tab() {
         switch (active) {
             case "description":
                 return (
-                    <div className="space-y-10 bg-neutral-900 text-white">
+                    <div className="space-y-10 bg-neutral-900 text-white rounded-2xl">
 
                         {/* Hero Section */}
-                        <div className="bg-neutral-800 p-8 rounded-3xl shadow-xl border border-[#8f7c45]/30">
+                        <div className="bg-neutral-800 p-8 rounded-3xl shadow-xl border border-white">
                             <h1 className="text-3xl md:text-4xl font-bold text-[#fac21e]  mb-4">
-                                Elevate Your Home’s Entrance
+                                Elevate Your Home's Entrance
                             </h1>
 
                             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
@@ -30,9 +30,9 @@ function Tab() {
                         </div>
 
                         {/* Craftsmanship & Security */}
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 gap-6 ">
 
-                            <div className="p-6 rounded-2xl shadow-md bg-neutral-800 border border-[#8f7c45]/40 transition-shadow hover:shadow-gold">
+                            <div className="p-6 rounded-2xl shadow-md bg-neutral-800 border border-white transition-shadow hover:shadow-gold">
                                 <h2 className="text-xl md:text-2xl font-semibold text-[#fac21e]   mb-4">
                                     Expert Craftsmanship
                                 </h2>
@@ -43,7 +43,7 @@ function Tab() {
                                 </ul>
                             </div>
 
-                            <div className="p-6 rounded-2xl shadow-md bg-neutral-800 border border-[#8f7c45]/40 transition-shadow">
+                            <div className="p-6 rounded-2xl shadow-md bg-neutral-800 border border-white transition-shadow">
                                 <h2 className="text-xl md:text-2xl font-semibold text-[#fac21e]   mb-4">
                                     Available Designs
                                 </h2>
@@ -52,7 +52,7 @@ function Tab() {
                                     {["Solid Steel", "Steel with Glass", "Wrought Iron & Wood"].map((item, i) => (
                                         <span key={i}
                                             className="bg-neutral-700 text-gray-200 px-4 py-1 rounded-full text-sm font-medium 
-                                        hover:bg-[#8f7c45]/20 border border-[#8f7c45]/40 cursor-pointer transition">
+                                        hover:bg-[#8f7c45]/20 border border-white/40 cursor-pointer transition">
                                             {item}
                                         </span>
                                     ))}
@@ -61,7 +61,7 @@ function Tab() {
                         </div>
 
                         {/* Enhancements */}
-                        <div className="p-6 rounded-2xl shadow-md bg-neutral-800 border border-[#8f7c45]/40">
+                        <div className="p-6 rounded-2xl shadow-md bg-neutral-800 border border-white">
                             <h2 className="text-xl md:text-2xl font-semibold text-[#fac21e]   mb-4">
                                 Enhancements & Upgrades
                             </h2>
@@ -74,7 +74,7 @@ function Tab() {
                         </div>
 
                         {/* Closing Statement */}
-                        <div className="bg-neutral-800 p-8 rounded-3xl shadow-xl text-center border border-[#8f7c45]/40">
+                        <div className="bg-neutral-800 p-8 rounded-3xl shadow-xl text-center border border-white">
                             <p className="text-lg md:text-xl font-bold text-[#fac21e]  ">
                                 With expert craftsmanship and personalized designs, we’ll help you create the
                                 <span className="underline decoration-[#8f7c45]"> first impression you’ve always dreamed of</span>.
@@ -138,7 +138,7 @@ function Tab() {
                                         className="
                                         relative p-6 rounded-3xl shadow-lg
                                         bg-linear-to-br from-[#222] via-[#1a1a1a] to-[#111]
-                                        border border-[#8f7c45]/40
+                                        border border-white
                                         transform-gpu transition-all duration-500
                                         hover:scale-105 hover:-translate-y-1 hover:rotate-1 hover:shadow-gold
                                         group flex flex-col h-64
@@ -169,7 +169,7 @@ function Tab() {
                         </div>
 
                         {/* Closing */}
-                        <div className="relative max-w-3xl mx-auto p-10 rounded-3xl bg-neutral-800 shadow-2xl border border-[#8f7c45]/40">
+                        <div className="relative max-w-3xl mx-auto p-10 rounded-3xl bg-neutral-800 shadow-2xl border border-white">
                             <p className="text-xl md:text-2xl font-extrabold text-center text-[#fac21e]">
                                 Every feature is designed for
                                 <span className="underline decoration-[#8f7c45]"> security, elegance & lasting value</span>.
@@ -229,13 +229,13 @@ function Tab() {
 
                             {optionsList.map(function (option, index) {
 
-                                var gradients = [
+                                const gradients = [
                                     "from-[#715723] to-[#8f7c45]",
                                     "from-[#5f4d22] to-[#8f7c45]",
                                     "from-[#4c3f1d] to-[#8f7c45]"
                                 ];
 
-                                var gradient = gradients[index % gradients.length];
+                                const gradient = gradients[index % gradients.length];
 
                                 return (
                                     <div
@@ -243,7 +243,7 @@ function Tab() {
                                         className={`
                                         relative p-6 rounded-3xl shadow-lg 
                                         bg-linear-to-br ${gradient}
-                                        border border-[#8f7c45]/40 
+                                        border border-white 
                                         transform-gpu transition-all duration-500
                                         hover:scale-105 hover:-translate-y-2 hover:shadow-gold cursor-pointer group
                                     `}
@@ -264,7 +264,7 @@ function Tab() {
 
 
                         {/* Closing */}
-                        <div className="relative max-w-3xl mx-auto p-10 rounded-3xl bg-neutral-800 shadow-2xl border border-[#8f7c45]/40">
+                        <div className="relative max-w-3xl mx-auto p-10 rounded-3xl bg-neutral-800 shadow-2xl border border-white">
                             <p className="text-xl md:text-2xl font-extrabold text-center text-[#fac21e]">
                                 Every option adds
                                 <span className="underline decoration-[#fac21e] "> luxury, customization & quality</span>.
@@ -354,7 +354,8 @@ function Tab() {
             backdrop-blur-xl 
             rounded-2xl 
             shadow-[0_15px_60px_rgba(0,0,0,0.7)]
-            border border-[#8f7c45]/25
+            // border border-[#8f7c45]/25
+            border border-white
             mr-2
             transition-all duration-300
             w-6xl
@@ -365,7 +366,7 @@ function Tab() {
             <div
                 className="
                 flex gap-4 flex-wrap mb-6 
-                pb-4 border-b border-[#8f7c45]/20
+                pb-4 border-b border-[#8f7c45]/20 border-white/40
             "
             >
                 {renderTabs()}
