@@ -55,7 +55,7 @@ export default function ImageSwiper(props) {
                     alt={"slide-" + current}
                     width={800}
                     height={600}
-                    className="rounded-lg shadow-lg object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                    className="rounded-lg shadow-lg object-contain transition-transform duration-300 group-hover:scale-[1.02] border-3 border-white"
                 />
 
                 <div className="absolute bottom-2 right-2 bg-black/60 text-white text-sm px-3 py-1 rounded">
@@ -68,7 +68,7 @@ export default function ImageSwiper(props) {
     return (
         <>
             {/* Main Container (No border) */}
-            <div className="rounded-xl p-6 bg-black shadow-lg mt-6 w-full flex justify-center">
+            <div className="rounded-lg p-[5px] bg-black shadow-lg mt-6 w-full flex justify-center">
                 {renderMain()}
             </div>
 
@@ -124,6 +124,7 @@ export default function ImageSwiper(props) {
                                 hover:bg-white/40 hover:scale-110
                                 transition p-3 rounded-full 
                                 text-white text-2xl font-bold shadow-lg
+                                hover:cursor-pointer
                             "
                         >
                             ✕
