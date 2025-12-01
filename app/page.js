@@ -1,5 +1,6 @@
 import BenefitsSection from "./components/home-page/BenefitsSection";
 import BlogsSection from "./components/home-page/BlogsSection";
+import FAQ from "./components/home-page/Faq";
 import FloatingButton from "./components/home-page/FloatingButtons";
 import Footer from "./components/home-page/Footer";
 import HeroSection from "./components/home-page/HeroSection";
@@ -83,6 +84,7 @@ export default function Home() {
             <Testimonials data={testimonialData} />
             <BlogsSection blogs={blogsData} news={newsData} />
             {/* <Footer/> */}
+            <FAQ />
         </>
     );
 }
