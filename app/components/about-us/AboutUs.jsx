@@ -44,16 +44,22 @@ function AboutUs() {
         <div className="bg-[#050505] text-white pt-0 mt-13 pb-28">
 
             {/* HERO SECTION */}
-            <section className="relative w-full h-screen mb-24">
-                <Image
-                    src="/desiginer-entry-gates1.jpg"
-                    alt="Hero Background"
-                    fill
-                    className="object-cover object-center"
-                    priority
+            <section className="relative w-full h-screen mb-24 overflow-hidden">
+
+                {/* Background Video */}
+                <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src="/about-us-finial.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                 />
+
+                {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black/60"></div>
 
+                {/* Foreground Content */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -73,18 +79,12 @@ function AboutUs() {
                         built for luxury homes and signature architectural spaces across India.
                     </p>
 
-                    {/* <div className="w-48 h-0.5 bg-[#fac21e]  mx-auto mt-12"></div> */}
-
                     <motion.div
                         initial={{ width: 0, opacity: 0 }}
                         animate={{ width: "12rem", opacity: 1 }}
                         transition={{ duration: 1.2, ease: "easeInOut" }}
-                        className="
-                            mx-auto mt-12 h-[3px] rounded-full
-                            bg-linear-to-r from-[#8B621A] via-[#EED9A1] to-[#C79A45]
-                        "
+                        className="mx-auto mt-12 h-[3px] rounded-full bg-linear-to-r from-[#8B621A] via-[#EED9A1] to-[#C79A45]"
                     />
-
                 </motion.div>
             </section>
 
@@ -109,7 +109,7 @@ function AboutUs() {
                                 className="bg-[#0c0c0c] border border-[#8f7c45]/30 p-8 rounded-2xl text-center"
                             >
                                 <h3 className="text-4xl font-bold text-[#fac21e] ">{item.year}</h3>
-                                <p className="mt-3 text-gray-300 text-lg">{item.text}</p>
+                                <p className="mt-3 text-gray-300 text-base">{item.text}</p>
                             </motion.div>
                         );
                     })}
