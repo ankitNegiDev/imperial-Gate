@@ -324,7 +324,7 @@ function AboutUs() {
                 viewport={{ once: true }}
             >
                 <h2 className="text-4xl font-semibold mb-6">Let's Build Something Legendary</h2>
-                <p className="text-gray-300 mb-8 text-base">
+                <p className="text-gray-300 mb-8 text-sm">
                     Ready to begin designing your premium architectural metalwork project?
                 </p>
                 <button className="px-12 py-4 rounded-full bg-linear-to-r from-[#715723] to-[#8f7c45] text-black font-semibold uppercase tracking-wide hover:brightness-110 transition hover:cursor-pointer">
