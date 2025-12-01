@@ -46,11 +46,11 @@ function FloatingButtons() {
 
     return (
         <>
-            <div className="fixed bottom-2 right-2 flex gap-3 z-50
+            {/* <div className="fixed bottom-2 right-2 flex gap-3 z-50
                 backdrop-blur-md bg-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.2)]
                 rounded-full px-3 py-2 border border-white/20">
 
-                {/* WhatsApp Icon */}
+                {/* WhatsApp Icon 
                 <a
                     href="https://wa.me/91XXXXXXXXXX"
                     target="_blank"
@@ -61,10 +61,10 @@ function FloatingButtons() {
                     <FaWhatsapp size={22} />
                 </a>
 
-                {/* Divider */}
+                {/* Divider 
                 <span className="w-px h-10 py-4 bg-white/30"></span>
 
-                {/* Enquiry Icon */}
+                {/* Enquiry Icon 
                 <button
                     onClick={toggleForm}
                     className="text-[#d4af37] p-3 rounded-full transition-all 
@@ -73,7 +73,47 @@ function FloatingButtons() {
                 >
                     <FaRegEnvelope size={20} />
                 </button>
+            </div> */}
+            
+            <div
+                className="
+                    fixed bottom-2 right-2 flex flex-col items-center gap-3 z-50
+                    backdrop-blur-md bg-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.2)]
+                    rounded-full px-2 py-4 border border-white/20
+                "
+            >
+
+                {/* Enquiry Icon */}
+                <button
+                    onClick={toggleForm}
+                    className="
+                        text-[#d4af37] p-3 rounded-full transition-all 
+                        hover:bg-[#d4af37] hover:text-black hover:scale-110
+                        flex items-center justify-center cursor-pointer
+                    "
+                >
+                    <FaRegEnvelope size={20} />
+                </button>
+
+                {/* Divider */}
+                <span className="w-10 h-[1px] bg-white/30"></span>
+
+                {/* WhatsApp Icon */}
+                <a
+                    href="https://wa.me/91XXXXXXXXXX"
+                    target="_blank"
+                    className="
+                        text-green-500 p-3 rounded-full transition-all
+                        hover:bg-green-500 hover:text-white hover:scale-110
+                        flex items-center justify-center hover:cursor-pointer
+                    "
+                >
+                    <FaWhatsapp size={22} />
+                </a>
+
             </div>
+
+
 
 
 
