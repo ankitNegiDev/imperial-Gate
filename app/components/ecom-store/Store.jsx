@@ -53,7 +53,7 @@ export default function StorePage() {
                     <button
                         key={index}
                         className="px-6 py-2 rounded-full border border-[#fac21e]/50 text-[#fac21e]
-                        hover:bg-[#fac21e] hover:text-black transition duration-300"
+                        hover:bg-[#fac21e] hover:text-black transition duration-300 hover:cursor-pointer"
                     >
                         {label}
                     </button>
