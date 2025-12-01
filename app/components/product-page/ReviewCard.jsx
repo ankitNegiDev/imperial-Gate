@@ -14,7 +14,7 @@ function ReviewCard(props) {
                 bg-neutral-900/60 backdrop-blur-xl 
                 rounded-3xl 
                 shadow-[0_10px_40px_rgba(0,0,0,0.55)]
-                border border-[#8f7c45]/25
+                border border-white
                 p-6 gap-6 w-full max-w-2xl mb-8
                 transition-all duration-300
                 hover:-translate-y-2 hover:shadow-[0_18px_50px_rgba(0,0,0,0.75)]
