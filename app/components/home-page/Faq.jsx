@@ -1,3 +1,7 @@
+/**
+ * so to create a faq -- first we need a array of faq right -- and then we need a state - which will tell us where user click currently -- and based on user click we will fire a onClick event which will set the tab which clicked and its ans will be displayed
+ */
+
 "use client";
 
 import React, { useState } from "react";
