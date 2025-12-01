@@ -37,7 +37,7 @@ export default function CallForm() {
                 shadow-[0_20px_70px_rgba(0,0,0,0.7)]
                 p-3
                 mt-14
-                border border-[#8f7c45]/40
+                border border-white
                 transition-all duration-300
                 hover:shadow-[0_25px_80px_rgba(0,0,0,0.85)]
                 m-0
