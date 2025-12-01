@@ -280,10 +280,10 @@ function AboutUs() {
                                 transition={{ duration: 0.8, delay: index * 0.12 }}
                                 viewport={{ once: true }}
                                 className="
-                        group bg-[#0c0c0c]/70 backdrop-blur-md rounded-2xl p-10 text-center 
-                        hover:-translate-y-2 transition-all duration-500 
-                        border border-[#8f7c45]/30 relative overflow-hidden
-                    "
+                                    group bg-[#0c0c0c]/70 backdrop-blur-md rounded-2xl p-10 text-center 
+                                    hover:-translate-y-2 transition-all duration-500 
+                                    border border-[#8f7c45]/30 relative overflow-hidden
+                                "
                             >
                                 <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-[3px] border-[#fac21e] 
                     shadow-[0_0_25px_#fac21e40] group-hover:shadow-[0_0_35px_#fac21e80] transition-all duration-700">
