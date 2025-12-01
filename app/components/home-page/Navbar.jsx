@@ -81,11 +81,13 @@ export default function Navbar() {
         setActiveMenu("");
     }
 
-    // redirect user to home page when user click home icon
+    // redirect to user when user click the logo & redirect user to home page when user click home icon 
     function goToHomePage() {
         router.push("/");
         setActiveMenu("");
     }
+
+
 
     // redirect user to blog page when user click blogs
     function goToBlogsPage() {
@@ -103,26 +105,32 @@ export default function Navbar() {
     // for scrolled behaviour of navbar
     const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
+    useEffect(function () {
         function handleScroll() {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
+
+            // If dropdown is open- keep navbar visible and stop hiding logic
+            if (activeMenu === "products") {
+                setHideNav(false);
+                return;
             }
 
-            // existing hide/show logic
-            if (window.scrollY > lastScroll && window.scrollY > 70) {
+            var currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 70) {
                 setHideNav(true);
             } else {
                 setHideNav(false);
             }
-            setLastScroll(window.scrollY);
+
+            setLastScroll(currentScroll);
         }
 
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScroll]);
+        return function () {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [lastScroll, activeMenu]);
+
 
     return (
 
@@ -164,6 +172,7 @@ export default function Navbar() {
                             width={120}
                             height={50}
                             priority
+                            onClick={function (){goToHomePage();}}
                         />
                     </div>
 
@@ -185,7 +194,11 @@ export default function Navbar() {
                             className="relative group cursor-pointer hover:text-amber-300"
                         >
                             About Us
-                            <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span>
+                            {/* <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span> */}
+
+                            <span
+                                className="absolute left-1/2 -bottom-0.5 h-[0.9px] w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 -translate-x-1/2 group-hover:w-full"
+                            ></span>
                         </div>
 
                         <div
@@ -193,13 +206,15 @@ export default function Navbar() {
                             className="relative group cursor-pointer hover:text-amber-300 flex items-center gap-2"
                         >
                             Products
-                            <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span>
+                            {/* <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span> */}
+
+                            <span className="absolute left-1/2 -bottom-0.5 h-[0.9px] w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 -translate-x-1/2 group-hover:w-full"></span>
 
                             {/* Dropdown arrow rotates when open */}
                             <FaChevronDown
                                 className={
                                     "transition-transform duration-300 " +
-                                    (activeMenu ? "rotate-180" : "rotate-0")
+                                    (activeMenu==="products" ? "rotate-180" : "rotate-0")
                                 }
                                 size={13}
                             />
@@ -222,7 +237,8 @@ export default function Navbar() {
                         >
                             Blogs
 
-                            <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span>
+                            {/* <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span> */}
+                            <span className="absolute left-1/2 -bottom-0.5 h-[0.9px] w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 -translate-x-1/2 group-hover:w-full"></span>
 
                         </div>
 
@@ -232,7 +248,8 @@ export default function Navbar() {
                             className="relative group cursor-pointer hover:text-amber-300"
                         >
                             Contact Us
-                            <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span>
+                            {/* <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 group-hover:w-full"></span> */}
+                            <span className="absolute left-1/2 -bottom-0.5 h-[0.9px] w-0 bg-linear-to-r from-[#715723] to-[#8f7c45] transition-all duration-300 -translate-x-1/2 group-hover:w-full"></span>
 
                         </div>
 
@@ -320,16 +337,13 @@ export default function Navbar() {
                     {/* <div className="mt-33 mb-50 border-2 border-blue-800 w-full h-[5vh]"></div> */}
                     <div
                         className="
-                        absolute left-0 top-[132px] w-full 
-                        bg-[rgba(10,10,10,0.65)] 
-                        backdrop-blur-md
-                        text-white shadow-[0_8px_30px_rgba(0,0,0,0.7)]
-                        border-t border-[#8f7c45]/40
-                        z-40 animate-slideDown
-                        
-                        h-[77vh]
-                        
-                        
+                            fixed left-0 top-[132px] w-full
+                            bg-[rgba(10,10,10,0.65)]
+                            backdrop-blur-md
+                            text-white shadow-[0_8px_30px_rgba(0,0,0,0.7)]
+                            border-t border-[#8f7c45]/40
+                            z-[9999] animate-slideDown
+                            h-[77vh]
                     "
                     >
                         <div className="max-w-7xl mx-auto p-0">
@@ -350,16 +364,6 @@ export default function Navbar() {
 
                             {/* PRODUCTS SECTION */}
                             {activeMenu === "products" && (
-                                // <div
-                                //     className="
-                                //         absolute left-0 top-[30px] w-full 
-                                //         bg-[rgba(10,10,10,0.65)] 
-                                //         backdrop-blur-md
-                                //         text-white shadow-[0_8px_30px_rgba(0,0,0,0.7)]
-                                //         border-t border-[#8f7c45]/40
-                                //         z-40 animate-slideDown
-                                //         "
-                                //     >
                                 <div className="max-w-6xl mx-auto p-2 relative">
 
                                     {/* Close Button */}
