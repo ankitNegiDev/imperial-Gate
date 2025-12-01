@@ -1,6 +1,69 @@
-/**
- * so to create a faq -- first we need a array of faq right -- and then we need a state - which will tell us where user click currently -- and based on user click we will fire a onClick event which will set the tab which clicked and its ans will be displayed
- */
+// /**
+//  * so to create a faq -- first we need a array of faq right -- and then we need a state - which will tell us where user click currently -- and based on user click we will fire a onClick event which will set the tab which clicked and its ans will be displayed
+//  */
+
+
+
+// "use client"
+
+// // importing the useState
+// import { useState } from "react";
+// function FAQ() {
+
+//     // we need a array of faq where we will add the the ans and que
+//     let faqs = [
+//         {
+//             question: "what is your name",
+//             answer: "my name is xyz"
+//         },
+//         {
+//             question: "do we get the home delivery",
+//             answer: "yes we do home delivery"
+//         },
+//         {
+//             question: "what is estimated delivery time",
+//             answer: "estimated delivery time depend on your location"
+//         }
+//     ]
+
+//     // now first we need a state which will keep track of which faq is clicked by user
+//     const [openedFaq, setOpenedFaq] = useState(null);
+
+//     // now we need a function that will set the which is active faq
+//     function setActiveFaq(index) {
+//         // setOpenedFaq(index);
+//         if (openedFaq === index) {
+//             setOpenedFaq(null);
+//         }
+//         else {
+//             setOpenedFaq(index);
+//         }
+//     }
+
+
+//     return (
+//         <div>
+//             {faqs.map(function (items, index) {
+//                 return (
+//                     <div>
+//                         <p
+//                             onClick={function () { setActiveFaq(index) }}
+//                         >
+//                             {items.question}
+//                             <span
+//                                 onClick={function () { setActiveFaq(index) }}
+//                             >{openedFaq === index ? "-" : "+"} </span>
+//                         </p>
+//                         {openedFaq === index && <p>{items.answer}</p>}
+//                     </div>
+//                 );
+//             })}
+//         </div>
+//     );
+// }
+// export default FAQ
+
+
 
 "use client";
 
