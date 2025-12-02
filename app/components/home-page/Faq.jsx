@@ -101,7 +101,7 @@ function FAQ(props) {
     }
 
     return (
-        <section className="max-w-6xl mx-auto px-6 md:px-12 py-20">
+        <section className="max-w-6xl mx-auto px-6 md:px-12 py-20 mb-20">
             <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#fac21e] mb-12 tracking-wide">
                 Frequently Asked Questions
             </h2>
