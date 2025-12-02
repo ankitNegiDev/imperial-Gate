@@ -144,7 +144,7 @@ function Footer() {
 
             {/* BOTTOM COPYRIGHT */}
             <div className="text-center text-gray-500 text-sm mt-16 pt-6 border-t border-[#8f7c45]/30">
-                © {new Date().getFullYear()} All Rights Reserved | niche Designed & Developed by Mavenox Prime Pvt. Ltd..
+                © {new Date().getFullYear()} All Rights Reserved | Designed & Developed by Mavenox Prime Pvt. Ltd..
             </div>
         </footer>
     );
