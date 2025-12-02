@@ -11,27 +11,27 @@ import React from "react";
 function BenefitsSection() {
     return (
         <section
-            className="w-full py-16"
+            className="w-full py-12 md:py-16"
             style={{
                 background: "linear-gradient(to bottom, #ffffff, #f9f7f2, #efe7d8)"
             }}
         >
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-6 md:px-4">
 
                 {/* TOP ICONS */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 text-center">
 
                     {/* FREE DESIGN */}
                     <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 mb-4">
+                        <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
                             <DesignIcon />
                         </div>
 
-                        <h3 className="text-2xl font-semibold tracking-wide text-black">
+                        <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
                             FREE <span className="text-[#8f7c45]">DESIGN</span>
                         </h3>
 
-                        <p className="mt-3 text-black/70 text-base max-w-lg">
+                        <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-lg leading-relaxed">
                             We'll measure to your home's exact specs and help you
                             choose a design to fit your style & budget.
                         </p>
@@ -39,15 +39,15 @@ function BenefitsSection() {
 
                     {/* FREE DELIVERY */}
                     <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 mb-4">
+                        <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
                             <DeliveryIcon />
                         </div>
 
-                        <h3 className="text-2xl font-semibold tracking-wide text-black">
+                        <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
                             FREE <span className="text-[#8f7c45]">DELIVERY</span>
                         </h3>
 
-                        <p className="mt-3 text-black/70 text-base max-w-lg">
+                        <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-lg leading-relaxed">
                             No hidden fees. No surprises. We build and deliver
                             your custom Iron Door with no extra cost.
                         </p>
@@ -55,16 +55,16 @@ function BenefitsSection() {
 
                     {/* FREE INSTALLATION */}
                     <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 mb-4">
+                        <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
                             <InstallIcon />
                         </div>
 
-                        <h3 className="text-2xl font-semibold tracking-wide text-black">
+                        <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
                             FREE <span className="text-[#8f7c45]">INSTALLATION</span>
                         </h3>
 
 
-                        <p className="mt-3 text-black/70 text-base max-w-lg">
+                        <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-lg leading-relaxed">
                             Our factory-trained installation crew will ensure
                             everything goes smoothly at your home.
                         </p>
@@ -72,14 +72,17 @@ function BenefitsSection() {
                 </div>
 
                 {/* DIVIDER LINE */}
-                <div className="w-full border-b border-black/40 my-5"></div>
+                <div className="w-full border-b border-black/40 my-8 md:my-5"></div>
 
                 {/* WARRANTY SECTION */}
-                <h2 className="text-center md:text-3xl font-semibold tracking-wide text-black">
-                    <span className="text-xl md:text-xl uppercase">ASK ABOUT OUR</span>{" "}
-                    <span className="text-2xl md:text-3xl text-[#8f7c45]">LIMITED LIFETIME WARRANTY</span>
+                <h2 className="text-center font-semibold tracking-wide text-black flex flex-col md:block">
+                    <span className="text-sm md:text-xl uppercase block md:inline mb-1 md:mb-0">
+                        ASK ABOUT OUR{" "}
+                    </span>
+                    <span className="text-lg md:text-3xl text-[#8f7c45]">
+                        LIMITED LIFETIME WARRANTY
+                    </span>
                 </h2>
-
 
             </div>
         </section>
