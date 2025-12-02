@@ -48,14 +48,17 @@ export default function StorePage() {
 
                     {/* Social Login */}
                     <div className="space-y-3 mb-6">
-                        <button className="w-full border border-slate-300 p-3 flex items-center justify-center gap-3 hover:bg-slate-50 transition duration-300 hover:cursor-pointer">
-                            <FcGoogle size={28} />
-                            <span className="font-medium text-slate-700 text-base">Continue with Google</span>
+                        <button className="w-full border border-slate-300 p-3 flex items-center justify-center gap-3 
+                                hover:bg-[#D4AF3710] hover:border-[#D4AF37] hover:text-[#D4AF37] 
+                                transition duration-300 cursor-pointer">
+                                <FcGoogle size={28} />
+                            <span className="font-medium text-base">Continue with Google</span>
                         </button>
-                        <button className="w-full border border-slate-300 p-3 flex items-center justify-center gap-3 hover:bg-slate-50 transition duration-300 ml-3 hover:cursor-pointer">
-                            <FaFacebook size={28} className='text-[#1877F2]' />
-                            <span className="font-medium text-slate-700 text-base">Continue with Facebook</span>
+                        <button className="w-full border border-slate-300 p-3 pl-8 flex items-center justify-center gap-3 hover:bg-[#D4AF3710] hover:border-[#D4AF37] hover:text-[#D4AF37] transition duration-300 cursor-pointer">
+                            <FaFacebook size={28} className="text-[#1877F2]" />
+                            <span className="font-medium text-base">Continue with Facebook</span>
                         </button>
+
                     </div>
 
                     <div className="relative flex py-2 items-center mb-6">
