@@ -25,7 +25,7 @@ function Footer() {
         }, 5000);
     }
     return (
-        <footer className="w-full pt-20 pb-10" style={{ backgroundColor: "#0a0a0a" }}>
+        <footer className="w-full pt-0 pb-10" style={{ backgroundColor: "#0a0a0a" }}>
             <div
                 className="
                 w-full h-1.5 mb-12 rounded-full
