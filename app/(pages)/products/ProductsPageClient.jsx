@@ -1,24 +1,25 @@
 "use client"
+
 // import CallForm from "./components/CallForm";
-import CallForm from "../../components/product-page/CallForm"
+import CallForm from "../../../components/product-page/CallForm"
 // import ImageSwiper from "./components/ImageSwiper";
-import ImageSwiper from "../../components/product-page/ImageSwiper"
+import ImageSwiper from "../../../components/product-page/ImageSwiper"
 // import MoreDoorIdeas from "./components/MoreDoorIdeas";
-import MoreDoorIdeas from "../../components/product-page/MoreDoorIdeas"
+import MoreDoorIdeas from "../../../components/product-page/MoreDoorIdeas"
 // import OtherProduct from "./components/OtherProduct";
-import OtherProduct from "../../components/product-page/OtherProduct"
+import OtherProduct from "../../../components/product-page/OtherProduct"
 // import Sidebar from "./components/Sidebar";
-import Sidebar from "../../components/product-page/Sidebar"
+import Sidebar from "../../../components/product-page/Sidebar"
 // import Tab from './components/Tab';
-import Tab from "../../components/product-page/Tab"
+import Tab from "../../../components/product-page/Tab"
 // import YouTubeEmbed from './components/YouTubeEmbed';
-import YouTubeEmbed from "../../components/product-page/YouTubeEmbed"
+import YouTubeEmbed from "../../../components/product-page/YouTubeEmbed"
 // import Footer from "./components/Footer";
 // import Footer from "../components/product-page/Footer"
 // import Footer from "../../components/home-page/Footer"
 
-import FloatingButtons from "../../components/home-page/FloatingButtons";
-import FAQ from "../../components/home-page/Faq";
+import FloatingButtons from "../../../components/home-page/FloatingButtons";
+import FAQ from "../../../components/home-page/Faq";
 
 
 
@@ -46,9 +47,9 @@ function ProductsPageClient() {
     ];
     return (
         <>
-            <div className="flex pt-34 pb-15 w-8xl gap-5 bg-black">
+            <div className="flex pt-34 pb-15 w-8xl gap-4 bg-black">
                 {/* left */}
-                <div className="w-[43%] flex flex-col gap-0 mr-0 ml-2 mt-5">
+                <div className="w-[20rem] flex flex-col gap-0 mr-0 ml-2 mt-5">
                     <Sidebar />
                     <OtherProduct
                         image={"/product-page/Bamboo.jpg"}
@@ -82,7 +83,7 @@ function ProductsPageClient() {
                         </div>
 
                         {/* RIGHT: More Door Ideas */}
-                        <div className="w-1/4 ml-5 ">
+                        <div className="w-[10rem] mr-5 ">
                             <MoreDoorIdeas doorImages={doorImages} />
                         </div>
 
@@ -101,11 +102,11 @@ function ProductsPageClient() {
                     <div>
                         <YouTubeEmbed />
                     </div>
-
-                    <div>
-                        <FAQ/>
-                    </div>
                 </div>
+                
+            </div>
+            <div className="">
+                <FAQ />
             </div>
             <div>
                 {/* <Footer /> */}
