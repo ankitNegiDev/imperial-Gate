@@ -35,9 +35,12 @@
 import { Playfair_Display, Fraunces, IBM_Plex_Sans, Nunito } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "./components/home-page/Navbar";
-import Footer from "./components/home-page/Footer";
+// import Navbar from "./components/home-page/Navbar";
 // import Footer from "./components/home-page/Footer";
+// import Footer from "./components/home-page/Footer";
+
+import Navbar from "../components/home-page/Navbar"
+import Footer from "../components/home-page/Footer"
 
 const ibm = IBM_Plex_Sans({
     subsets: ["latin"],
