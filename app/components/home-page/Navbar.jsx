@@ -141,18 +141,18 @@ export default function Navbar() {
             {/* --- NAVBAR MAIN --- */}
             <nav
                 className={
-                    `fixed top-0 left-0 w-full z-50 px-0 pt-1.5 pb-1 transition-all duration-500
+                    `fixed top-0 left-0 w-full z-50 px-0 pt-1.5 pb-1 transition-all duration-50
                     ${hideNav ? "-translate-y-full" : "translate-y-0"}
                     ${scrolled || mobileMenuOpen
-                        ? "bg-black/95 backdrop-blur-lg text-[#d4b469] border-b-2 border-[#b08812]/90"
-                        : "bg-black/90 text-white border-b-2 border-[#b08812]"
+                        ? "bg-black backdrop-blur-lg text-[#d4b469] border-b-2 border-[#b08812]/90"
+                        : "bg-black text-white border-b-2 border-[#b08812]"
                     }`
                 }
             >
                 <div className="flex items-center justify-between max-w-8xl px-4 md:px-0 mx-auto">
 
                     {/* LOGO */}
-                    <div className="text-xl font-bold cursor-pointer relative z-[60]">
+                    <div className="text-xl font-bold cursor-pointer relative z-60">
                         <Image
                             src="/Dwars-Logo-new.png"
                             alt="Website Logo"
