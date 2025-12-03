@@ -1,7 +1,14 @@
 
-import FloatingButtons from "../../components/home-page/FloatingButtons";
-import Blogs from "../../components/blogs/Blogs";
-import FAQ from "../../components/home-page/Faq";
+// import FloatingButtons from "../../components/home-page/FloatingButtons";
+// import Blogs from "../../components/blogs/Blogs";
+// import FAQ from "../../components/home-page/Faq";
+
+// import Blogs from "@/components/blogs/Blogs";
+// import FAQ from "@/components/home-page/Faq";
+// import FloatingButtons from "@/components/home-page/FloatingButtons";
+import Blogs from "../../../components/blogs/Blogs"
+import FloatingButtons from "../../../components/home-page/FloatingButtons"
+import FAQ from "../../../components/home-page/Faq"
 
 function Blog(){
 
