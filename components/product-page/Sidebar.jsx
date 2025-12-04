@@ -108,6 +108,7 @@ function Sidebar() {
                 return (
                     // <Link href={`/products/${item.title.toLowerCase().replace(/ /g, "-")}`} key={index}>
                         <div
+                            key={index}
                             className="
                                 group 
                                 relative 
