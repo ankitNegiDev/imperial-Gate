@@ -283,6 +283,7 @@ export default function Navbar() {
                             </div>
                         </div>
 
+                        {/* on mobile screen especially on product page - the product dropdown img are overflowing the viewport fix it  */}
                         {/* Visual Grid for Mobile Products */}
                         <div className={`grid grid-cols-2 gap-3 mt-2 overflow-hidden transition-all duration-500 ease-in-out ${mobileProductsOpen ? "max-h-[1200px] opacity-100 pb-4" : "max-h-0 opacity-0"}`}>
                             {mobileCategories.map(function (item, idx) {
@@ -346,7 +347,7 @@ export default function Navbar() {
                         text-white shadow-[0_8px_30px_rgba(0,0,0,0.7)]
                         border-t border-[#8f7c45]/40
                         z-[9999] animate-slideDown
-                        h-[77vh] hidden md:block
+                        h-[80vh] hidden md:block
                     "
                 >
                     <div className="max-w-6xl mx-auto p-2 relative">
