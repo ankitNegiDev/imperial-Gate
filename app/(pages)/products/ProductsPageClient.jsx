@@ -45,9 +45,11 @@ function ProductsPageClient() {
         "/product-page/internship task 2 iamge.jpg",
         "/product-page/internship task 3 image.jpg",
     ];
+
+    // fix is overflow-hidden sm:overflow-visible on the main product container
     return (
         <>
-            <div className="flex pt-34 pb-15 w-8xl gap-4 bg-black">
+            <div className="flex pt-34 pb-15 w-8xl gap-4 bg-black overflow-hidden sm:overflow-visible">
                 {/* left */}
                 <div className="w-[20rem] flex flex-col gap-0 mr-0 ml-2 mt-5">
                     <Sidebar />
@@ -77,8 +79,6 @@ function ProductsPageClient() {
                             <h1 className="ml-4 text-4xl font-bold text-[#fac21e]  mb-0 mt-2 tracking-wide drop-shadow-[0_0_6px_rgba(143,124,69,0.5)] text-center">
                                 {category}
                             </h1>
-
-
                             <ImageSwiper images={images} />
                         </div>
 

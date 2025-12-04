@@ -39,6 +39,7 @@ import "./globals.css";
 // import Footer from "./components/home-page/Footer";
 // import Footer from "./components/home-page/Footer";
 
+// import Navbar from "../components/home-page/Navbar"
 import Navbar from "../components/home-page/Navbar"
 import Footer from "../components/home-page/Footer"
 
