@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import ProductsPageClient from "./ProductsPageClient.jsx";
+import ProductsPageClient from "./ProductsPageClient.jsx"
 
 export default function Home() {
     return (

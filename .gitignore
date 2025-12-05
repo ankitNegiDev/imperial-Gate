@@ -44,3 +44,5 @@ next-env.d.ts
 Test.jsx
 Store1.jsx
 page1.jsx
+ProductHero.jsx
+ProductsPageClient1.jsx
