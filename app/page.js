@@ -33,7 +33,8 @@ export default function Home() {
             designation: "CEO",
             company: "Example Corp",
             type: "image",
-            media: "/desiginer-entry-gates1.jpg",
+            // media: "/desiginer-entry-gates1.jpg",
+            media:"/products-page-img/1-Modern-Flat-Entrance-Doors/FED-(98).jpg"
         },
         {
             heading: "Amazing Experience",
@@ -55,7 +56,7 @@ export default function Home() {
             title: "How Luxury Interiors Are Designed",
             category: "Interior",
             description: "Explore how modern luxury homes are designed with perfection and creativity.",
-            image: "/royal-entry-doors.jpg"
+            image: "/products-page-img/2-Brass-Staircase-Railings/2-BSR-(1).jpg"
             // image:"/gradient-img.png"
         },
         {
@@ -63,14 +64,16 @@ export default function Home() {
             category: "Lifestyle",
             description:
                 "Simple and effective styling techniques used by top professionals to elevate spaces.",
-            image: "/modern-steel-doors.png"
+            // image: "/modern-steel-doors.png"
+            image:"/products-page-img/1-Wrought-Iron-Boundarywall-Door/1-WIBD-(1).jpg"
         },
         {
             title: "Best Materials for Modern Architecture",
             category: "Architecture",
             description:
                 "A complete guide to choosing the best materials for durability and aesthetics.",
-            image: "/stair-case-railings.png"
+            // image: "/stair-case-railings.png"
+            image:"/products-page-img/2-Brass-Staircase-Railings/2-BSR-(3).jpg"
         }
     ];
 
@@ -79,8 +82,9 @@ export default function Home() {
         {
             title: "Our New Store Launch",
             category: "Announcement",
-            image: "/desiginer-entry-gates1.jpg",
-            description: "We are excited to announce the opening of our new store..."
+            description: "We are excited to announce the opening of our new store...",
+            // image: "/desiginer-entry-gates1.jpg",
+            image:"/products-page-img/2-Modern-Boundry-wall-Doors/3-MBW-(1).jpg"
         },
     ];
 

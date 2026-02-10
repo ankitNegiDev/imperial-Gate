@@ -105,20 +105,13 @@ function FloatingButtons() {
             {/* updated eniquiry and whatspp icons */}
 
             <div
-                className="fixed bottom-4 right-4 flex flex-col items-center gap-3 z-50 
-                    bg-gradient-to-b from-gray-700 via-black to-black
-                    border border-[#d4af37]
-                    shadow-[0_10px_30px_rgba(0,0,0,0.9),0_0_15px_rgba(212,175,55,0.3)]
-                    rounded-full p-2 py-5"
+                className="fixed bottom-4 right-4 flex flex-col items-center gap-3 z-50 bg-gradient-to-b from-gray-700 via-black to-black border border-[#d4af37] shadow-[0_10px_30px_rgba(0,0,0,0.9),0_0_15px_rgba(212,175,55,0.3)] rounded-full p-2 py-5"
             >
 
                 {/* Enquiry Icon */}
                 <button
                     onClick={toggleForm}
-                    className="group relative p-3 rounded-full transition-all duration-300 ease-out
-                        hover:scale-110 flex items-center justify-center cursor-pointer
-                        /* Hover Effect: Gold Gradient */
-                        hover:bg-gradient-to-tr hover:from-[#b8860b] hover:to-[#ffd700] hover:shadow-[0_0_10px_#d4af37]"
+                    className="group relative p-3 rounded-full transition-all duration-300 ease-out hover:scale-110 flex items-center justify-center cursor-pointer hover:bg-gradient-to-tr hover:from-[#b8860b] hover:to-[#ffd700] hover:shadow-[0_0_10px_#d4af37]"
                 >
                     <FaRegEnvelope
                         size={20}
@@ -134,10 +127,7 @@ function FloatingButtons() {
                     href="https://wa.me/91XXXXXXXXXX"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-3 rounded-full transition-all duration-300 ease-out
-                            hover:scale-110 flex items-center justify-center cursor-pointer
-                            /* Hover Effect: WhatsApp Gradient */
-                            hover:bg-gradient-to-tr hover:from-[#128C7E] hover:to-[#25D366] hover:shadow-[0_0_10px_#25D366]"
+                    className="group p-3 rounded-full transition-all duration-300 ease-out hover:scale-110 flex items-center justify-center cursor-pointer hover:bg-gradient-to-tr hover:from-[#128C7E] hover:to-[#25D366] hover:shadow-[0_0_10px_#25D366]"
                 >
                     <FaWhatsapp
                         size={22}
@@ -175,7 +165,7 @@ function FloatingButtons() {
                             <input
                                 type="text"
                                 placeholder="Your Name"
-                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg placeholder-gray-600 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black/50 transition shadow-sm"
+                                className="w-full border-[1.8px] border-gray-400 p-3.5 rounded-lg placeholder-gray-600 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-black/50 transitionshadow-sm"
                             />
 
                             <input

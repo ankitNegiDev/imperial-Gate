@@ -92,17 +92,115 @@
 // export default BenefitsSection;
 
 
-// now making it responsive for tablet or medium screens -- (mobile -> tab -> laptop)
+//! now making it responsive for tablet or medium screens -- (mobile -> tab -> laptop)
 
-"use client";
+// "use client";
 
-import React from "react";
+// import React from "react";
 // import { Nunito } from "next/font/google";
 
 // const nunito = Nunito({
 //     subsets: ["latin"],
 //     weight: ["400", "600", "700"],
 // });
+
+// function BenefitsSection() {
+//     return (
+//         <section
+//             className="w-full py-12 md:py-16"
+//             style={{
+//                 background: "linear-gradient(to bottom, #ffffff, #f9f7f2, #efe7d8)"
+//             }}
+//         >
+//             <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-4">
+
+//                 {/* TOP ICONS */}
+//                 <div className="
+//                 grid 
+//                     grid-cols-1 
+//                     md:grid-cols-2 
+//                     lg:grid-cols-3 
+//                     gap-12 md:gap-y-12 md:gap-x-8 lg:gap-10 
+//                     text-center
+//                 ">
+
+//                     {/* FREE DESIGN */}
+//                     <div className="flex flex-col items-center">
+//                         <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
+//                             <DesignIcon />
+//                         </div>
+
+//                         <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
+//                             FREE <span className="text-[#8f7c45]">DESIGN</span>
+//                         </h3>
+
+//                         <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-md lg:max-w-lg leading-relaxed">
+//                             We'll measure to your home's exact specs and help you
+//                             choose a design to fit your style & budget.
+//                         </p>
+//                     </div>
+
+//                     {/* FREE DELIVERY */}
+//                     <div className="flex flex-col items-center">
+//                         <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
+//                             <DeliveryIcon />
+//                         </div>
+
+//                         <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
+//                             FREE <span className="text-[#8f7c45]">DELIVERY</span>
+//                         </h3>
+
+//                         <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-md lg:max-w-lg leading-relaxed">
+//                             No hidden fees. No surprises. We build and deliver
+//                             your custom Iron Door with no extra cost.
+//                         </p>
+//                     </div>
+
+//                     {/* FREE INSTALLATION */}
+//                     {/* Tablet Adjustment: This item spans 2 columns on tablet to center it at the bottom */}
+//                     <div className="flex flex-col items-center md:col-span-2 lg:col-span-1">
+//                         <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
+//                             <InstallIcon />
+//                         </div>
+
+//                         <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
+//                             FREE <span className="text-[#8f7c45]">INSTALLATION</span>
+//                         </h3>
+
+
+//                         <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-md lg:max-w-lg leading-relaxed">
+//                             Our factory-trained installation crew will ensure
+//                             everything goes smoothly at your home.
+//                         </p>
+//                     </div>
+//                 </div>
+
+//                 {/* DIVIDER LINE */}
+//                 <div className="w-full border-b border-black/40 my-8 md:my-10 lg:my-5"></div>
+
+//                 {/* WARRANTY SECTION */}
+//                 <div className="text-center font-semibold tracking-wide text-black flex flex-col md:flex-row md:justify-center md:items-baseline md:gap-2">
+//                     <span className="text-sm md:text-lg lg:text-xl uppercase block mb-1 md:mb-0">
+//                         ASK ABOUT OUR
+//                     </span>
+//                     <span className="text-lg md:text-2xl lg:text-3xl text-[#8f7c45]">
+//                         LIMITED LIFETIME WARRANTY
+//                     </span>
+//                 </div>
+
+//             </div>
+//         </section>
+//     );
+// }
+
+// export default BenefitsSection;
+
+
+
+//! hydration issue - due to multiline css
+"use client";
+
+import React from "react";
 
 function BenefitsSection() {
     return (
@@ -114,19 +212,8 @@ function BenefitsSection() {
         >
             <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-4">
 
-                {/* TOP ICONS */}
-                <div className="
-                    grid 
-                    /* Mobile: 1 Column */
-                    grid-cols-1 
-                    /* Tablet (md): 2 Columns (Pyramid Layout) */
-                    md:grid-cols-2 
-                    /* Desktop (lg): 3 Columns (Original Layout restored) */
-                    lg:grid-cols-3 
-                    
-                    gap-12 md:gap-y-12 md:gap-x-8 lg:gap-10 
-                    text-center
-                ">
+                {/* TOP ICONS - Fixed: Flattened to single line to prevent hydration mismatch */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-y-12 md:gap-x-8 lg:gap-10 text-center">
 
                     {/* FREE DESIGN */}
                     <div className="flex flex-col items-center">
@@ -161,7 +248,6 @@ function BenefitsSection() {
                     </div>
 
                     {/* FREE INSTALLATION */}
-                    {/* Tablet Adjustment: This item spans 2 columns on tablet to center it at the bottom */}
                     <div className="flex flex-col items-center md:col-span-2 lg:col-span-1">
                         <div className="w-20 h-20 md:w-24 md:h-24 mb-3 md:mb-4">
                             <InstallIcon />
@@ -170,7 +256,6 @@ function BenefitsSection() {
                         <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-black">
                             FREE <span className="text-[#8f7c45]">INSTALLATION</span>
                         </h3>
-
 
                         <p className="mt-2 md:mt-3 text-black/70 text-sm md:text-base max-w-xs md:max-w-md lg:max-w-lg leading-relaxed">
                             Our factory-trained installation crew will ensure
